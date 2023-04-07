@@ -245,6 +245,12 @@ async def feet(ctx):
     while True:
         await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
 
+@bot.cmd(description="harry potter r34")
+async def harrypotter(ctx):
+    cTag = ["harry_potter"]
+    while True:
+        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+
 @bot.cmd(description="gives the bots latency")
 async def ping(ctx):
     await ctx.channel.send(f"The bots ping is **{round(bot.latency)}** ms!")
