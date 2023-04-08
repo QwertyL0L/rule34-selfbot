@@ -62,14 +62,11 @@ bot = selfcord.Bot(prefixes="?")
 def stop_bot(): 
   os.execv(sys.executable, ['python'] + sys.argv)
 
-@bot.on("message")
-async def on_message(message):
-    if message.author.id in whitelist:
-        await message.channel.send("?"+message.content)
-
 @bot.on("ready")
 async def ball(time):
     print(f"Connected To {bot.user}\n Startup took {time:0.2f} seconds")
+
+################################### R34 COMMANDS ################################################
 
 @bot.cmd(description="furry porn")
 async def furry(ctx):
@@ -251,6 +248,32 @@ async def harrypotter(ctx):
     while True:
         await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
 
+@bot.cmd(description="r34 of lesbians")
+async def lesbian(ctx):
+    cTag = ["lesbian"]
+    while True:
+        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+
+@bot.cmd(description="jujutsu kaisen r34")
+async def gojo(ctx):
+    cTag = ["jujutsu_kaisen"]
+    while True:
+        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+
+@bot.cmd(description="naruto r34")
+async def naruto(ctx):
+    cTag = ["naruto"]
+    while True:
+        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+
+@bot.cmd(description="demon slayer r34")
+async def demonslayer(ctx):
+    cTag = ["demon_slayer"]
+    while True:
+        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+
+################################### UTILITY COMMANDS ################################################
+
 @bot.cmd(description="gives the bots latency")
 async def ping(ctx):
     await ctx.channel.send(f"The bots ping is **{round(bot.latency)}** ms!")
@@ -279,7 +302,7 @@ async def hide(ctx):
     await ctx.send("E\nE\nE\nE\nE\nE\nE\nE")
     time.sleep(1)
     await ctx.send("E\nE\nE\nE\nE\nE\nE\nE")
-    
+
 TOKEN = "YOUR TOKEN HERE"
 
 bot.run(TOKEN)
