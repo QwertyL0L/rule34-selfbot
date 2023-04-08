@@ -1,2 +1,2 @@
 # Rule34 Selfbot
-a discord selfbot that spams r34 from https://www.rule34.xxx
+a discord selfbot that grabs rule34 from rule34.xxx and then spams it
