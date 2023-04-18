@@ -13,7 +13,7 @@ a discord selfbot that grabs rule34 from rule34.xxx and then spams it to people 
 
 4. copy your token from the popup
 
-5. paste your token on the 3 to last line in the quotation marks
+5. paste your token on the 3rd to last line in the quotation marks
 
 6. run the bot
 
