@@ -4,7 +4,6 @@ import json
 from random import choice as rchoice
 import os
 import sys
-import time
 
 endpoint_url = "https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&tags=%s&json=1&limit=1000&pid=%s"
 headers = {
@@ -59,231 +58,396 @@ bot = selfcord.Bot(prefixes="?")
 
 #cmdname = ["amongus","balls","catboy","fem","fp","gay","genshin","goku","help","hentai","jmale","jojo","male","mario","mfurry","mha","minecraft","onepiece","random","roblox","shit"]
 
-def stop_bot(): 
+def stop_bot():
+  """Stops The Bot"""
   os.execv(sys.executable, ['python'] + sys.argv)
 
 @bot.on("ready")
 async def ball(time):
     print(f"Connected To {bot.user}\n Startup took {time:0.2f} seconds")
 
-################################### R34 COMMANDS ################################################
-
 @bot.cmd(description="furry porn")
 async def furry(ctx):
     cTag = ["furry"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="gay porn :skull:")
 async def gay(ctx):
     cTag = ["gay"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="femboy rule34")
 async def fem(ctx):
     cTag = ["femboy"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="jojo rule34")
 async def jojo(ctx):
     cTag = ["jojo's_bizarre_adventure"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="b a l l s")
 async def balls(ctx):
     cTag = ["balls"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="male cmd but better ig")
 async def jmale(ctx):
     cTag = ["male_only"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="rule34 of males")
 async def male(ctx):
     cTag = ["male"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="catboy rule34")
 async def catboy(ctx):
     cTag = ["catboy"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="male furry rule34")
 async def mfurry(ctx):
     cTag = ["furry_male"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="mario rule34")
 async def mario(ctx):
     cTag = ["mario"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="my hero rule34")
 async def mha(ctx):
     cTag = ["my_hero_academia"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="hentai")
 async def hentai(ctx):
     cTag = ["hentai"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="shit rule34 (why does this even exist)")
 async def shit(ctx):
     cTag = ["shit"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="goku rule34")
 async def goku(ctx):
     cTag = ["goku"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="genshin rule34")
 async def genshin(ctx):
     cTag = ["genshin_impact"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="amongus rule34")
 async def amongus(ctx):
     cTag = ["among_us"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="one piece rule34")
 async def onepiece(ctx):
     cTag = ["one_piece"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="roblox rule34")
 async def roblox(ctx):
     cTag = ["roblox"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="gets random rule34 from the rule34.xxx homepage")
 async def random(ctx):
     cTag = [""]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="minecraft rule34")
 async def minecraft(ctx):
     cTag = ["minecraft"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="villager rule34")
 async def villager(ctx):
     cTag = ["villager"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="military rule34 ig")
 async def military(ctx):
     cTag = ["military"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="vegeta rule34")
 async def vegeta(ctx):
     cTag = ["vegeta"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="pokemon rule34")
 async def pokemon(ctx):
     cTag = ["pokemon"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="gay sex")
 async def gsex(ctx):
     cTag = ["gay_sex"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="ayo?")
 async def cum(ctx):
     cTag = ["cum"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="god of war rule34")
 async def gow(ctx):
     cTag = ["god_of_war"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="santa rule34")
 async def santa(ctx):
     cTag = ["santa_hat"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="feet i guess")
 async def feet(ctx):
     cTag = ["feet"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="harry potter r34")
 async def harrypotter(ctx):
     cTag = ["harry_potter"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="r34 of lesbians")
 async def lesbian(ctx):
     cTag = ["lesbian"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="jujutsu kaisen r34")
 async def gojo(ctx):
     cTag = ["jujutsu_kaisen"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="naruto r34")
 async def naruto(ctx):
     cTag = ["naruto"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
 
 @bot.cmd(description="demon slayer r34")
 async def demonslayer(ctx):
     cTag = ["demon_slayer"]
-    while True:
-        await ctx.send(rchoice(request_handler(formatTags([*tags_list, *cTag]), 1))['file_url'])
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
+
+@bot.cmd(description="footjob ig")
+async def footjob(ctx):
+    cTag = ["footjob"]
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
+
+@bot.cmd(description="undertale r34")
+async def undertale(ctx):
+    cTag = ["undertale"]
+    response = request_handler(formatTags([*tags_list, *cTag]), 1)
+    if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+    else:
+                print("Error: Invalid response")
+
+@bot.cmd(description="something u dont have lmao")
+async def bigpp(ctx):
+        cTag = ["big_penis"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
 
 ################################### UTILITY COMMANDS ################################################
 
-@bot.cmd(description="gives the bots latency")
-async def ping(ctx):
-    await ctx.channel.send(f"The bots ping is **{round(bot.latency)}** ms!")
+#@bot.cmd(description="gives the bots latency")
+#async def ping(ctx):
+    #await ctx.channel.send(f"The bots ping is **{round(bot.latency)}** ms!")
 
 @bot.cmd(description="spams text (not rule34)")
 async def spam(ctx, *, text:str):
     while True:
         await ctx.send(text)
 
-@bot.cmd(description="Purges the rule34 images")
+@bot.cmd(description="Purges the rule34 images (large num=slower)")
 async def purge(ctx, amount: int=None):
         await ctx.purge(amount)
 
@@ -294,14 +458,7 @@ async def stop(ctx):
 
 @bot.cmd(description="hides the rule34 but doesnt delete it")
 async def hide(ctx):
-    time.sleep(1)
-    await ctx.send("E\nE\nE\nE\nE\nE\nE\nE")
-    time.sleep(1)
-    await ctx.send("E\nE\nE\nE\nE\nE\nE\nE")
-    time.sleep(1)
-    await ctx.send("E\nE\nE\nE\nE\nE\nE\nE")
-    time.sleep(1)
-    await ctx.send("E\nE\nE\nE\nE\nE\nE\nE")
+    await ctx.send("E\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE\nE")
 
 TOKEN = "YOUR TOKEN HERE"
 
