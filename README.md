@@ -1,7 +1,7 @@
 # ⚠️ WARNING SELFBOTS ARE AGAINST DISCORD TOS I AM NOT RESPONSIBLE IF YOU GET BANNED FOR USING THIS SELFBOT ⚠️
 
 # Rule34 Selfbot
-a discord selfbot that grabs rule34 from rule34.xxx and then spams it to people or servers
+a discord selfbot that grabs rule34 from rule34.xxx and then spams it in people's dms or server's
 
 # How To Get Your Discord Token
 
@@ -22,3 +22,11 @@ a discord selfbot that grabs rule34 from rule34.xxx and then spams it to people 
 ```
 javascript:alert((webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.getToken!==void 0).exports.default.getToken());
 ```
+
+# Use cases
+
+• Raiding servers
+
+• Trolling your friends
+
+• Spamming GC's
