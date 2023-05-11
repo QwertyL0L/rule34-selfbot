@@ -436,11 +436,81 @@ async def bigpp(ctx):
         else:
             print("Error: Invalid response")
 
+@bot.cmd(description="subway surfers r34")
+async def subway(ctx):
+        cTag = ["subway_surfers"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
+
+@bot.cmd(description="helluva boss r34")
+async def helluva(ctx):
+        cTag = ["helluva_boss"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
+
+@bot.cmd(description="one punch man r34")
+async def opm(ctx):
+        cTag = ["saitama"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
+
+@bot.cmd(description="looney tunes r34")
+async def looney(ctx):
+        cTag = ["looney_tunes"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
+
+@bot.cmd(description="gravity falls r34")
+async def gfalls(ctx):
+        cTag = ["gravity_falls"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
+
+@bot.cmd(description="disney r34 (pls dont sue me disney)")
+async def disney(ctx):
+        cTag = ["disney"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
+
+@bot.cmd(description="nintedo r34 (pls dont sue me nintendo)")
+async def nintendo(ctx):
+        cTag = ["nintendo"]
+        response = request_handler(formatTags([*tags_list, *cTag]), 1)
+        if response:
+            while True:
+                await ctx.send(rchoice(response)['file_url'])
+        else:
+            print("Error: Invalid response")
+
 ################################### UTILITY COMMANDS ################################################
 
-#@bot.cmd(description="gives the bots latency")
-#async def ping(ctx):
-    #await ctx.channel.send(f"The bots ping is **{round(bot.latency)}** ms!")
+@bot.cmd(description="gives the bots latency")
+async def ping(ctx):
+    await ctx.channel.send(f"The bots ping is **{round(bot.latency)}** ms!")
 
 @bot.cmd(description="spams text (not rule34)")
 async def spam(ctx, *, text:str):
