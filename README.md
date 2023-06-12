@@ -31,6 +31,6 @@ javascript:alert((webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.
 
 • Spamming GC's
 
-• Tramatize underaged kids
+• Tramatize underaged discord kids
 
 • Annoy your Friends
